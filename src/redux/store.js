@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import React from "react";
-import obrasReducer from "./obrasSlice";
+import artworkReducer from "./artworkSlice";
 
 export const store = configureStore(
   {
     reducer: {
-      obras: obrasReducer,
+      obras: artworkReducer,
     },
   },
   window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()

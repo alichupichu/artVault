@@ -1,11 +1,22 @@
 import React from "react";
-import { useSelector } from "react-redux";
-import { selectObrasData } from "../redux/obrasSlice";
+import Header from "./Header";
+import Footer from "./Footer";
+import Main from "./Main";
 
 const Interface = () => {
-  const obrasData = useSelector(selectObrasData);
-  console.log(obrasData);
-  return <></>;
+  return (
+    <>
+      <header>
+        <Header />
+      </header>
+      <main>
+        <Main />
+      </main>
+      <footer>
+        <Footer />
+      </footer>
+    </>
+  );
 };
 
 export default Interface;

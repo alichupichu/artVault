@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
-    return (  );
-}
- 
+  return (
+    <>
+      <small>Copyright 2024 AMC & AIC</small>
+    </>
+  );
+};
+
 export default Footer;

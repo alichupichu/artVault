@@ -1,21 +1,19 @@
 import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
-import { setObrasData } from "./redux/obrasSlice";
+import { setArtworkData } from "./redux/artworkSlice";
 import Interface from "./components/Interface";
 
 const App = () => {
   const dispatch = useDispatch();
 
-  const getObjectsIDs = async () => {
-    const { data } = await axios.get(
-      `https://collectionapi.metmuseum.org/public/collection/v1/search?hasImages=true&q=sunrise`
-    );
-    dispatch(setObrasData(data.objectIDs));
+  const getArtworks = async () => {
+    const { data } = await axios.get(`https://api.artic.edu/api/v1/artworks`);
+    dispatch(setArtworkData(data.data));
   };
 
   useEffect(() => {
-    getObjectsIDs();
+    getArtworks();
   }, []);
   return (
     <>
