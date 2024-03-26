@@ -15,6 +15,6 @@ export const obrasSlice = createSlice({
 
 export const { setObrasData } = obrasSlice.actions;
 
-export const selectObrasData = (state) => state.obra.obrasData;
+export const selectObrasData = (state) => state.obras.obrasData;
 
 export default obrasSlice.reducer;

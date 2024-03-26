@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { setObrasData } from "./redux/obrasSlice";
+import Interface from "./components/Interface";
 
 const App = () => {
   const dispatch = useDispatch();
@@ -16,7 +17,11 @@ const App = () => {
   useEffect(() => {
     getObjectsIDs();
   }, []);
-  return <></>;
+  return (
+    <>
+      <Interface />
+    </>
+  );
 };
 
 export default App;
