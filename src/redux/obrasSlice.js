@@ -7,17 +7,14 @@ export const obrasSlice = createSlice({
   name: "obras",
   initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
-    },
     setObrasData: (state, { payload }) => {
       state.obrasData = payload;
     },
   },
 });
 
-export const { increment, decrement } = obrasSlice.actions;
+export const { setObrasData } = obrasSlice.actions;
 
-export const selectCount = (state) => state.obras.value;
+export const selectObrasData = (state) => state.obra.obrasData;
 
 export default obrasSlice.reducer;
