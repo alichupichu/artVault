@@ -74,3 +74,8 @@ lds-hourglass {
     transform: rotate(1800deg);
   }
 }
+
+.artcard {
+  background-color: #9d9d9da0;
+  margin: 20px;
+}
